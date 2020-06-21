@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Product</ion-title>
+        <ion-buttons slot="end" (click)="onCart()">
+            <ion-icon class="cart-size" name="cart" large color="primary"></ion-icon>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-slides pager="true" [options]="slideOpts">
+        <ion-slide>
+            <img src={{ProductList.img}}>
+        </ion-slide>
+    </ion-slides>
+    <div class="text-render">
+        <h2>{{ProductList.description}}</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae interdum ante. Quisque a augue elit. Sed id dolor id est scelerisque porttitor eget a ligula. Ut dapibus feugiat purus tempus maximus.</p>
+        <ion-header>
+            Options and extras
+        </ion-header>
+        <p>Select the options you want to be included in this item.</p>
+        <hr>
+        <ion-header>
+            Size and Prices
+        </ion-header>
+        <br>
+        <ion-radio-group value={{ProductList.price}}>
+            <ion-list>
+                <ion-item>
+                    <ion-label>Standard
+                        <p>{{ProductList.price}}</p>
+                    </ion-label>
+                    <ion-radio value={{ProductList.price}} color="primary" checked></ion-radio>
+                </ion-item>
+            </ion-list>
+        </ion-radio-group>
+        <br>
+        <div>
+            <ion-button expand="full" color="primary" (click)="onAddCart(ProductList)">
+                <ion-icon name="basket" slot="start"></ion-icon>
+                Quick add to cart
+            </ion-button>
+        </div>
+        <div>
+            <ion-row>
+                <ion-col>
+                    <ion-button color="light" (click)="onCartConfirmation(ProductList)">
+                        <ion-icon slot="start" name="cart"></ion-icon>
+                        Add to cart
+                    </ion-button>
+                </ion-col>
+                <ion-col>
+                    <ion-button color="light" (click)="onAddFavorite(ProductList,ProductList.title)">
+                        <ion-icon slot="start" name="star"></ion-icon>
+                        Add to favs
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+</ion-content>

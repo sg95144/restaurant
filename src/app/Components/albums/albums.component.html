@@ -1,0 +1,91 @@
+<app-slide></app-slide>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Albums</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-card (click)="onSalads('Salads')">
+      <div class="outer-div">
+        <img src="../../../assets/images/albums/salads.png">
+        <div class="inner-title">
+          Salads
+        </div>
+        <div class="inner-subtitle">
+          Delicious and healthy
+        </div>
+      </div>
+    </ion-card>
+    <ion-card (click)="onSides('Sides')">
+      <div class="outer-div">
+        <img src="../../../assets/images/albums/sides.png">
+        <div class="inner-title">
+          Sides
+        </div>
+        <div class="inner-subtitle">
+          Complete a knock-out meal
+        </div>
+      </div>
+    </ion-card>
+
+    <ion-card (click)="onExtraOne('Φωτογραφίες εξωφύλλου')">
+      <div class="outer-div">
+        <img src="../../../assets/images/albums/extra1.jpg">
+        <div class="inner-title">
+          Φωτογραφίες εξωφύλλου
+        </div>
+
+      </div>
+
+    </ion-card>
+    <ion-card  (click)="onExtraTwo('Εικόνες προφίλ ')">
+      <div class="outer-div">
+        <img src="../../../assets/images/albums/extra2.png">
+        <div class="inner-title">
+          Εικόνες προφίλ
+        </div>
+      </div>
+    </ion-card>
+
+    <ion-card (click)="onMainCourse('Main Course')"> 
+      <div class="outer-div">
+        <img src="../../../assets/images/albums/main-course.png">
+        <div class="inner-title">
+          Main Course
+        </div>
+        <div class="inner-subtitle">
+          Our lovely suggestions
+        </div>
+      </div>
+    </ion-card>
+
+    <ion-card (click)="onAppetizers('Appetizers')">
+
+      <div class="outer-div">
+        <img src="../../../assets/images/albums/appetizers.png">
+        <div class="inner-title">
+          Appetizers
+        </div>
+        <div class="inner-subtitle">
+          Most popular selections
+        </div>
+      </div>
+    </ion-card>
+    <ion-card (click)="onDeserts('Desserts')">
+
+      <div class="outer-div">
+        <img src="../../../assets/images/albums/deserts.jpg">
+        <div class="inner-title">
+          Desserts
+        </div>
+        <div class="inner-subtitle">
+          Proven to please
+        </div>
+      </div>
+    </ion-card>
+  </ion-content>
+</div>

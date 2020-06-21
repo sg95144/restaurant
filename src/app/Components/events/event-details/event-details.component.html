@@ -1,0 +1,47 @@
+<ion-header>
+
+
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{EventDetails.title}}</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+<ion-content>
+  <div class="text-center">
+    <h2>{{EventDetails.title}}</h2>
+    <p>
+      <ion-icon name="time"></ion-icon> {{EventDetails.date}} <br>
+      <ion-icon name="compass"></ion-icon> {{EventDetails.hotel}}
+    </p>
+  </div>
+    <div>
+      <img src={{EventDetails.img}}>
+    </div>
+    <div class="text-center">
+    <div>
+      <p>{{EventDetails.description}}</p>
+      <p></p>
+    </div>
+    <div>
+      <ion-list>
+        <ion-item>
+          <ion-icon name="location"></ion-icon>
+          &nbsp;<ion-label>
+            <h2>{{EventDetails.hotel}}</h2>
+            <p>{{EventDetails.street}}</p>
+            <p>{{EventDetails.location}}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+      <div>
+        <ion-button expand="full" color="primary">GET DIRECTIONS</ion-button>
+        <ion-button expand="full" color="success">ADD TO CALENDER</ion-button>
+
+      </div>
+    </div>
+</div>
+  
+</ion-content>

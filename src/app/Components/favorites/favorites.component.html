@@ -1,0 +1,42 @@
+<app-slide></app-slide>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Favorites</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content pullingIcon="arrow-dropdown"  refreshingSpinner="circles"
+     >
+      </ion-refresher-content>
+      </ion-refresher>
+    <div *ngIf="FavoriteList.length===0">
+    <ion-label>
+      <h1 style="text-align: center;">No Favorite items</h1>
+    </ion-label>
+
+    </div>
+    <ion-list>
+      <ion-item-sliding *ngFor="let list of FavoriteList; let i=index">
+        <ion-item  (click)="onGOTODATA(list.id,list)">
+          <ion-thumbnail>
+            <img src={{list.img}}>
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{list.title}}</h2>
+            <p>{{list.description}}</p>
+          </ion-label>
+        </ion-item>
+        <ion-item-options>
+          <ion-item-option color="danger" (click)="onRemove(i)">
+            Remove
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+  </ion-content>
+</div>

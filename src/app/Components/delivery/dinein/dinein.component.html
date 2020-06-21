@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+      <ion-title>Dine in</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <br>
+
+<div class="textforrender">
+
+
+    <h3>High Street Restaurant</h3>
+    <p>50 Market Street, San Francisco, California 94103, United States</p>
+  </div>
+  <form [formGroup]="dineForm">
+  
+      <ion-item>
+        <ion-label>Tabel</ion-label>
+        <ion-select formControlName="tabel" [ngClass]="{'has-error':dineForm.get('tabel').errors && (dineForm.get('tabel').touched || dineForm.get('tabel').dirty)}">
+          <ion-select-option value="ab121">AB121</ion-select-option>
+          <ion-select-option value="ba101">BA101</ion-select-option>
+          <ion-select-option value="cc207">CC207</ion-select-option>
+        </ion-select>
+        <span *ngIf="dineForm.get('tabel').errors && (dineForm.get('tabel').touched || dineForm.get('tabel').dirty)"
+        class="testdanger">
+        <span *ngIf="dineForm.get('tabel').errors.required">
+         Table is Required
+        </span>
+      </span>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="text" formControlName="email"
+          [ngClass]="{'has-error':dineForm.get('email').errors && (dineForm.get('email').touched || dineForm.get('email').dirty)}">
+        </ion-input>
+        <span *ngIf="dineForm.get('email').errors && (dineForm.get('email').touched || dineForm.get('email').dirty)"
+          class="testdanger">
+          <span *ngIf="dineForm.get('email').errors.required">
+            Email Id is Required
+          </span>
+        </span>
+
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label position="floating">Phone</ion-label>
+        <ion-input type="text" formControlName="phone"
+          [ngClass]="{'has-error':dineForm.get('phone').errors && (dineForm.get('phone').touched || dineForm.get('phone').dirty)}">
+        </ion-input>
+        <span *ngIf="dineForm.get('phone').errors && (dineForm.get('phone').touched || dineForm.get('phone').dirty)"
+          class="testdanger">
+          <span *ngIf="dineForm.get('phone').errors.required">
+            Phone no  is Required
+          </span>
+        </span>
+      </ion-item>
+   
+  </form>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button [disabled]="!dineForm.valid" (click)="onDine(dineForm.value)">
+        Send
+        <ion-icon slot="end" name="paper-plane"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

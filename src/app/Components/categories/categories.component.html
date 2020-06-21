@@ -1,0 +1,70 @@
+<app-slide></app-slide>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Categories</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content >
+    <ion-list>
+
+      <ion-item (click)="onAppetizers()">
+        <ion-thumbnail  slot="start">
+          <img src="./../../../assets/images/appetizers/cat1.png">
+        </ion-thumbnail >
+        <ion-label>
+          <h2>Appetizers</h2>
+          <h3>This is for the Appetizers</h3>
+          <!-- <p>Listen, I've had a pretty messed up day...</p> -->
+        </ion-label>
+      </ion-item>
+      
+      <ion-item (click)="onSalads()">
+        <ion-thumbnail  slot="start">
+          <img src="./../../../assets/images/salads/c1.png">
+        </ion-thumbnail >
+        <ion-label>
+          <h2>Salads</h2>
+          <h3>This is for the SaladsF</h3>
+          <!-- <p>Listen, I've had a pretty messed up day...</p> -->
+        </ion-label>
+      </ion-item>
+      
+      <ion-item (click)="onSalads()">
+        <ion-thumbnail  slot="start">
+          <img src="./../../../assets/images/sides/cat-b-thumb.png">
+        </ion-thumbnail >
+        <ion-label>
+          <h2>Sides</h2>
+          <h3>This is for the Sides</h3>
+          <!-- <p>Listen, I've had a pretty messed up day...</p> -->
+        </ion-label>
+      </ion-item>
+      
+      <ion-item (click)="onDeserts()">
+        <ion-thumbnail  slot="start">
+          <img src="./../../../assets/images/deserts/d1.png">
+        </ion-thumbnail >
+        <ion-label>
+          <h2>Deserts</h2>
+          <h3>This is for the Deserts</h3>
+          <!-- <p>Listen, I've had a pretty messed up day...</p> -->
+        </ion-label>
+      </ion-item >
+      
+      <ion-item (click)="onMainCourse()">
+        <ion-thumbnail  slot="start">
+          <img src="./../../../assets/images/main-course/cat-d-thumb.png">
+        </ion-thumbnail >
+        <ion-label>
+          <h2>Main Course</h2>
+          <h3>This is for the Main Course</h3>
+          <!-- <p>Listen, I've had a pretty messed up day...</p> -->
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</div>

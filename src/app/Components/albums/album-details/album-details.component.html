@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+      <ion-title>{{title}}</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let list of AlbumList">
+    <img src={{list.img}}>
+    <ion-label>
+      <h2>{{list.title}}</h2>
+    </ion-label>
+  </ion-card>
+</ion-content>

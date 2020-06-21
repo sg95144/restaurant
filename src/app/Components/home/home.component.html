@@ -1,0 +1,110 @@
+<app-slide></app-slide>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button style="color: black;"></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ios overscroll hydrated">
+    <div>
+      
+      <ion-slides pager="true" [options]="slideOpts">
+
+        <ion-slide>
+          <div class="slide">
+            <img src="../../../assets/images/home/c1.png" >
+            <div class="home-title">
+              Crawfish
+            </div>
+          </div>
+        </ion-slide>
+
+        <ion-slide>
+          <img src="../../../assets/images/home/c2.png" >
+          <div class="home-title">
+            Chicken and Onion Mix
+          </div>
+        </ion-slide>
+
+        <ion-slide>
+          <img src="../../../assets/images/home/c3.png">
+          <div class="home-title">
+            Shrimp Rolls
+          </div>
+        </ion-slide>
+
+      </ion-slides>
+    </div>
+    <ion-row>
+      <ion-col>
+        <ion-card style="margin: 0px;" (click)="onAppitizer()">
+          <img src="../../../assets/images/appetizers/cat1.png">
+          <ion-card-content>
+            <h5> Appetizers </h5>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card style="margin: 0px;" (click)="onSalads()">
+          <img src="../../../assets/images/salads/c1.png">
+          <ion-card-content>
+            <h5>Salads</h5>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card style="margin: 0px;" (click)="onSides()">
+          <img src="../../../assets/images/sides/cat-b-thumb.png">
+          <ion-card-content>
+            <h5> Sides </h5>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card style="margin: 0px;" (click)="onDeserts()">
+          <img src="../../../assets/images/deserts/d1.png">
+          <ion-card-content>
+            <h5>Deserts</h5>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="width:100%">
+        <ion-card style="    width: 100%;
+      margin: 0;" (click)="onMaincourse()">
+          <img src="../../../assets/images/main-course/cat-d-thumb.png">
+          <ion-card-content>
+            <h5> Main Course </h5>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <div>
+      <ion-card style="margin: 0px;">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-item (click)="onContact()">
+                <ion-icon name="information-circle"></ion-icon>
+                Contact us
+              </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item (click)="onMap()">
+                <ion-icon name="map"></ion-icon>
+                Map
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </div>
+  </ion-content>
+</div>

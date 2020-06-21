@@ -1,0 +1,28 @@
+<app-slide></app-slide>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Events</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list >
+      <ion-item *ngFor="let list of EventList" (click)="onEventDetails(list.id,list)">
+        <ion-thumbnail>
+          <img src={{list.img}}>
+        </ion-thumbnail>
+        <ion-label>
+          <h2>{{list.title}}</h2>
+          <p>
+            <ion-icon name="time"></ion-icon>{{list.date}} <br>
+            <ion-icon name="compass"></ion-icon>{{list.hotel}}
+          </p>
+          <p>{{list.description}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</div>

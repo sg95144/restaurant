@@ -1,0 +1,49 @@
+<ion-header>
+
+
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{PostsDetails.title}}</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+<ion-content>
+  <div class="text-center">
+    <h2>{{PostsDetails.title}}</h2>
+    <p>
+      <ion-icon name="time"></ion-icon> {{PostsDetails.date}} <br>
+      <ion-icon name="pricetag"></ion-icon> {{PostsDetails.event}}<br>
+      <ion-icon name="person"></ion-icon>  {{PostsDetails.hotel}}
+    </p>
+  </div>
+    <div>
+      <img src={{PostsDetails.img}}>
+    </div>
+    <div class="text-center">
+    <div>
+      <p>{{PostsDetails.description}}</p>
+      <p></p>
+    </div>
+    <div>
+      <!-- <ion-list>
+        <ion-item>
+          <ion-icon name="location"></ion-icon>
+          &nbsp;<ion-label>
+            <h2>{{EventDetails.hotel}}</h2>
+            <p>{{EventDetails.street}}</p>
+            <p>{{EventDetails.location}}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list> -->
+      <div>
+        <ion-button expand="full" color="primary">{{PostsDetails.button}}
+          <ion-icon name="play-circle-outline" slot="end"></ion-icon>
+
+        </ion-button>
+      </div>
+    </div>
+</div>
+  
+</ion-content>

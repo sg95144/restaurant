@@ -1,0 +1,148 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Home Delivery</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+<ion-content fullscreen>
+  <form [formGroup]="HomeDeliveryForm" padding-right>
+    <!-- firstname -->
+    <ion-item>
+      <ion-label position="floating">First Name</ion-label>
+      <ion-input type="text" formControlName="firstname"
+          [ngClass]="{'has-error':HomeDeliveryForm.get('firstname').errors && (HomeDeliveryForm.get('firstname').touched || HomeDeliveryForm.get('firstname').dirty)}">
+      </ion-input>
+      <small
+          *ngIf="HomeDeliveryForm.get('firstname').errors && (HomeDeliveryForm.get('firstname').touched || HomeDeliveryForm.get('firstname').dirty)"
+          class="testforvalid">
+          <small *ngIf="HomeDeliveryForm.get('firstname').errors.required">
+              firstname is required
+          </small>
+          
+      </small>
+  </ion-item>
+
+  <!-- Lastname -->
+    <ion-item>
+      <ion-label position="floating">Last name</ion-label>
+      <ion-input type="text" formControlName="lastname"
+          [ngClass]="{'has-error':HomeDeliveryForm.get('lastname').errors && (HomeDeliveryForm.get('lastname').touched || HomeDeliveryForm.get('lastname').dirty)}">
+      </ion-input>
+      <small
+          *ngIf="HomeDeliveryForm.get('lastname').errors && (HomeDeliveryForm.get('lastname').touched || HomeDeliveryForm.get('lastname').dirty)"
+          class="testforvalid">
+          <small *ngIf="HomeDeliveryForm.get('lastname').errors.required">
+              Lastname is required
+          </small>
+      </small>
+    </ion-item>
+
+    <!-- Phone no -->
+    <ion-item>
+      <ion-label position="floating">Phone</ion-label>
+      <ion-input type="text" formControlName="phone"
+          [ngClass]="{'has-error':HomeDeliveryForm.get('phone').errors && (HomeDeliveryForm.get('phone').touched || HomeDeliveryForm.get('phone').dirty)}">
+      </ion-input>
+      <small
+          *ngIf="HomeDeliveryForm.get('phone').errors && (HomeDeliveryForm.get('phone').touched || HomeDeliveryForm.get('phone').dirty)"
+          class="testforvalid">
+          <small *ngIf="HomeDeliveryForm.get('phone').errors.required">
+              Phon no is required
+          </small>
+      </small>
+    </ion-item>
+
+    <!-- Email -->
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" formControlName="email"
+      [ngClass]="{'has-error':HomeDeliveryForm.get('email').errors && (HomeDeliveryForm.get('email').touched || HomeDeliveryForm.get('email').dirty)}">
+  </ion-input>
+  <small
+      *ngIf="HomeDeliveryForm.get('email').errors && (HomeDeliveryForm.get('email').touched || HomeDeliveryForm.get('email').dirty)"
+      class="testforvalid">
+      <small *ngIf="HomeDeliveryForm.get('email').errors.required">
+         Email is required
+      </small>
+      <small *ngIf="HomeDeliveryForm.get('email').errors.email">
+      Email Should be a valid email
+     </small>
+  </small>
+    </ion-item>
+
+    <!-- Address -->
+    <ion-item>
+      <ion-label position="floating">Address</ion-label>
+      <ion-input type="text" formControlName="address"
+      [ngClass]="{'has-error':HomeDeliveryForm.get('address').errors && (HomeDeliveryForm.get('address').touched || HomeDeliveryForm.get('address').dirty)}">
+  </ion-input>
+  <small
+      *ngIf="HomeDeliveryForm.get('address').errors && (HomeDeliveryForm.get('address').touched || HomeDeliveryForm.get('address').dirty)"
+      class="testforvalid">
+      <small *ngIf="HomeDeliveryForm.get('address').errors.required">
+          Address  is required
+      </small>
+  </small>
+    </ion-item>
+
+    <!-- ZipCode -->
+    <ion-item>
+      <ion-label position="floating">Zip</ion-label>
+      <ion-input type="text" formControlName="zip"
+      [ngClass]="{'has-error':HomeDeliveryForm.get('zip').errors && (HomeDeliveryForm.get('zip').touched || HomeDeliveryForm.get('zip').dirty)}">
+  </ion-input>
+  <small
+      *ngIf="HomeDeliveryForm.get('zip').errors && (HomeDeliveryForm.get('zip').touched || HomeDeliveryForm.get('zip').dirty)"
+      class="testforvalid">
+      <small *ngIf="HomeDeliveryForm.get('zip').errors.required">
+          Zip code is required
+      </small>
+  </small>
+    </ion-item>
+
+    <!-- CityName -->
+    <ion-item>
+      <ion-label position="floating">City</ion-label>
+      <ion-input type="text" formControlName="city"
+      [ngClass]="{'has-error':HomeDeliveryForm.get('city').errors && (HomeDeliveryForm.get('city').touched || HomeDeliveryForm.get('city').dirty)}">
+  </ion-input>
+  <small
+      *ngIf="HomeDeliveryForm.get('city').errors && (HomeDeliveryForm.get('city').touched || HomeDeliveryForm.get('city').dirty)"
+      class="testforvalid">
+      <small *ngIf="HomeDeliveryForm.get('city').errors.required">
+         City is required
+      </small>
+  </small>
+    </ion-item>
+
+    <!-- CountryName -->
+    <ion-item>
+      <ion-label position="floating">Country</ion-label>
+      <ion-input type="text" formControlName="country"
+      [ngClass]="{'has-error':HomeDeliveryForm.get('country').errors && (HomeDeliveryForm.get('country').touched || HomeDeliveryForm.get('country').dirty)}">
+  </ion-input>
+  
+    </ion-item>
+    <small
+    *ngIf="HomeDeliveryForm.get('country').errors && (HomeDeliveryForm.get('country').touched || HomeDeliveryForm.get('country').dirty)"
+    class="testforvalid">
+    <small *ngIf="HomeDeliveryForm.get('country').errors.required">
+        Country  is required
+    </small>
+</small>
+  </form>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="end" (click)="onSubmit(HomeDeliveryForm.value)">
+      <ion-button [disabled]="!HomeDeliveryForm.valid">
+        Submit
+        <ion-icon name="paper-plane" slot="end">
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

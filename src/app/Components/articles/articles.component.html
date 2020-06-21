@@ -1,0 +1,27 @@
+<app-slide ></app-slide>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>News</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <br>
+  <ion-content fullscreen>
+    <ion-list >
+
+      <ion-item *ngFor="let record of newsList,let i=index">
+        <ion-thumbnail  slot="start">
+          <img src={{record.img}}>
+        </ion-thumbnail >
+        <ion-label (click)="onNews(record.id,record)">
+          <h2>{{record.title}}</h2>
+          <h3>{{record.description}}</h3>
+        </ion-label>
+      </ion-item>
+      <br>
+    </ion-list>
+  </ion-content>
+</div>

@@ -1,0 +1,26 @@
+<app-slide ></app-slide>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Sides</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-row>
+      <ion-col  *ngFor="let list of SidesList" (click)="onProduct(list.id,list)">
+        <ion-card >
+          <img src={{list.img}} />
+          <ion-item>
+            <ion-label>
+              <h5> {{list.title}}</h5>
+              <h6>{{list.price}}</h6>
+            </ion-label>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-content>
+</div>
